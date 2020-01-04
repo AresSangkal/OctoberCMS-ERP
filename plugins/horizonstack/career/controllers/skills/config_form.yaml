@@ -1,0 +1,10 @@
+name: Skills
+form: $/horizonstack/career/models/skill/fields.yaml
+modelClass: Horizonstack\Career\Models\Skill
+defaultRedirect: horizonstack/career/skills
+create:
+    redirect: 'horizonstack/career/skills/update/:id'
+    redirectClose: horizonstack/career/skills
+update:
+    redirect: horizonstack/career/skills
+    redirectClose: horizonstack/career/skills

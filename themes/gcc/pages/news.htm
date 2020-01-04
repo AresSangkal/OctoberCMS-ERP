@@ -1,0 +1,54 @@
+title = "News"
+url = "/news"
+layout = "default"
+is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "news-category"
+postPage = "detail-news"
+
+[searchForm]
+resultPage = "news-search"
+categoryFilter = 0
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "news-category"
+==
+<section class="contact">
+    <div class="part-top mb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading prallex-heading">
+                        <h2>News <span>And</span> Media</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                {% component 'blogPosts' %}
+            </div>
+            <div class="col-md-4">
+                <div class="card custom-card">
+                    <div class="row">
+                        <div class="col-md-12">
+                            {% component 'searchForm' %}
+                        </div>
+                    </div>
+
+                    {% component 'blogCategories' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

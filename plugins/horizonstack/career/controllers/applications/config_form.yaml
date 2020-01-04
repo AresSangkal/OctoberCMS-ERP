@@ -1,0 +1,10 @@
+name: Applications
+form: $/horizonstack/career/models/application/fields.yaml
+modelClass: Horizonstack\Career\Models\Application
+defaultRedirect: horizonstack/career/applications
+create:
+    redirect: 'horizonstack/career/applications/update/:id'
+    redirectClose: horizonstack/career/applications
+update:
+    redirect: horizonstack/career/applications
+    redirectClose: horizonstack/career/applications

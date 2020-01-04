@@ -1,0 +1,46 @@
+fields:
+    title:
+        label: Title
+        span: auto
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: title
+            type: slug
+        type: text
+    category:
+        label: Category
+        type: relation
+        select: name
+        span: left
+    job_app_no:
+        label: 'Job App. No'
+        type: number
+        span: auto
+    date_posted:
+        label: 'Date Posted'
+        mode: datetime
+        span: left
+        type: datepicker
+    expiry_date:
+        label: 'Expiry Date'
+        mode: datetime
+        span: auto
+        type: datepicker
+    is_linkedin_required:
+        label: 'Is Linkedin profile link required?'
+        span: left
+        default: 0
+        type: switch
+    description:
+        label: Description
+        span: full
+        type: richeditor
+        size: huge
+    is_active:
+        label: Active
+        span: left
+        default: 1
+        type: switch

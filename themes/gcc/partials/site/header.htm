@@ -1,0 +1,415 @@
+<div class="header-container">
+    {% if activeLocale == 'en' %}
+    <div class="demo-navber">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-8">
+                    <div class="demo-logo">
+                        <a class="navbar-brand" href="{{'homepage'|page}}"><img src="/themes/gcc/assets/images/logo.png"
+                                alt="logo" /></a>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="demo-button">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navber-area">
+        <nav class="navbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="logo">
+                                <a class="navbar-brand" href="{{'homepage'|page}}"><img
+                                        src="/themes/gcc/assets/images/logo.png" alt="logo" class="" /></a>
+                            </div>
+                        </div>
+                        <ul class="menu-sidebar pull-right">
+                            <!-- <li class="marv-share pr-0">
+                                <div class="slideouticons">
+                                    <input type="checkbox" id="togglebox">
+                                    <label for="togglebox" class="mainlabel"><i class="fa fa-language"></i></label>
+                                    <div class="iconswrapper">
+                                        <ul>
+                                            <li><a class="social-ln" href="#" data-request="onSwitchLocale"
+                                                    data-request-data="locale: 'en'">English</a></li>
+                                            <li><a class="social-ln" href="#" data-request="onSwitchLocale"
+                                                    data-request-data="locale: 'ar'">عربى</a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li> -->
+                            <!-- New -->
+                            <div class="dropdown">
+                                    <button class="fa fa-language"></button>
+                                    <div class="dropdown-content">
+                                            <a class="social-ln" href="#" data-request="onSwitchLocale"
+                                            data-request-data="locale: 'en'">English</a>
+                                            <a class="social-ln" href="#" data-request="onSwitchLocale"
+                                                    data-request-data="locale: 'ar'">عربى</a>
+                                    </div>
+                                  </div> 
+                            <!-- employee login-->
+<!--                             <li class="marv-share pr-0">
+                                <div class="slideouticons">
+                                    <input type="checkbox" id="togglebox2">
+                                    <label for="togglebox2" class="mainlabel"><i class="fa fa-user"></i></label>
+                                    <div class="iconswrapper">
+                                        <ul>
+                                            <li><a class="social-ln" href="https://mail.office365.com/">Mail</a></li>
+                                            <li><a class="social-ln"
+                                                    href="http://213.236.57.76/Citrix/AccessPlatform/auth/login.aspx">GCC
+                                                    Citrix</a></li>
+                                            <li><a class="social-ln" href="http://37.224.46.131/">Citrix Link</a></li>
+                                            <li><a class="social-ln" href="http://77.110.119.150/">Citrix XAPP</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li> -->
+                            <!-- new-->
+                            <div class="dropdown">
+                                    <button class="fa fa-user"></button>
+                                    <div class="dropdown-content">
+                                            <li><a class="social-ln" href="/backend">Employee Access</a></li>
+                                            <a class="social-ln" href="https://mail.office365.com/">Mail</a>
+                                            <a class="social-ln"
+                                                    href="http://213.236.57.76/Citrix/AccessPlatform/auth/login.aspx">GCC
+                                                    Citrix</a>
+                                                    <a class="social-ln" href="http://37.224.46.131/">Citrix Link</a>
+                                                    <a class="social-ln" href="http://77.110.119.150/">Citrix XAPP</a>
+                                    </div>
+                                  </div> 
+                            <!-- end employee login-->
+                        </ul>
+                        </ul>
+                        <div class="collapse navbar-collapse nav-menu pull-right" id="bs-example-navbar-collapse-1">
+                            <div class="nav-close-button">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </div>
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    {% if this.page.id == 'homepage' %}
+                                    
+                                    <!--<a href="#" data-scroll-nav="1">About</a> -->
+                                    <!-- -->
+                                    <li class="nav-item dropdown">
+                                        <a href="#" class="nav-link dropdown-toggle:hover" data-toggle="dropdown">About</a>
+                                        <div class="dropdown-menu">
+                                            <a href="#corporate-projects" class="dropdown-item">Corporate Projects</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a href="#ceo-message" class="dropdown-item">CEO Message</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a href="#gcc-milestone" class="dropdown-item">History</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a href="#vision-mission" class="dropdown-item">Vision & Mission</a>
+                                        </div>
+                                    </li>
+                                    <!-- -->
+                                    {% else %}
+                                    <a href="{{'homepage'|page}}">About</a>
+                                    {% endif %}
+                                </li>
+                                <li>
+                                    {% if this.page.id == 'homepage' %}
+                                    <a href="#" data-scroll-nav="2">Services</a>
+                                    {% else %}
+                                    <a href="{{'homepage'|page}}">Services</a>
+                                    {% endif %}
+                                </li>
+                                <li>
+                                    {% if this.page.id == 'homepage' %}
+                                    <a href="#" data-scroll-nav="3">Projects</a></li>
+                                {% else %}
+                                <a href="{{'homepage'|page}}">Projects</a>
+                                {% endif %}
+                                <li>
+                                    {% if this.page.id == 'homepage' %}
+                                    <a href="#" data-scroll-nav="4">News</a>
+                                    {% else %}
+                                    <a href="{{'homepage'|page}}">News</a>
+                                    {% endif %}
+                                </li>
+                                <li>
+                                    {% if this.page.id == 'homepage' %}
+                                    <a href="#" data-scroll-nav="5">Clients</a>
+                                    {% else %}
+                                    <a href="{{'homepage'|page}}">Clients</a>
+                                    {% endif %}
+                                </li>
+                                <li>
+                                    {% if this.page.id == 'homepage' %}
+                                    <a href="#" data-scroll-nav="6">Business Opportunity</a>
+                                    {% else %}
+                                    <a href="{{'homepage'|page}}">Business Opportunity</a>
+                                    {% endif %}
+                                </li>
+                                <li>
+                                    <a href="{{'career'|page}}"
+                                        class="{% if this.page.id == 'career' %}active{% endif %}">Careers</a>
+                                </li>
+                                <li>
+                                    <a href="{{'contact'|page}}"
+                                        class="{% if this.page.id == 'contact' %}active{% endif %}">Contact</a>
+                                </li>
+                                <li id="mobile-lan-icon">
+                                    <a class="social-ln" data-request="onSwitchLocale" data-request-data="locale: 'en'"
+                                        href="#" style="padding-right: 20px;">English</a>
+                                    <a class="social-ln" data-request="onSwitchLocale" data-request-data="locale: 'ar'"
+                                        href="#" style="padding-left: 20px; border-left: 1px solid #fff;">عربى</a>
+                                </li>
+                                <li id="mobile-login-icon"><a href="#"><i
+                                            class="fa fa-user"></i>&nbsp;&nbsp;&nbsp;Login</a>
+                                </li>
+                                <li id="mobile-lan-icon">
+                                    <ul>
+                                            <li><a class="social-ln" href="/backend">Employee Access</a></li>
+                                        <li><a class="social-ln" href="https://mail.office365.com/">Mail</a></li>
+                                        <li><a class="social-ln"
+                                                href="http://213.236.57.76/Citrix/AccessPlatform/auth/login.aspx">GCC
+                                                Citrix</a></li>
+                                        <li><a class="social-ln" href="http://37.224.46.131/">Citrix Link</a></li>
+                                        <li><a class="social-ln" href="http://77.110.119.150/">Citrix XAPP</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    {% elseif activeLocale == 'ar' %}
+    <div class="demo-navber">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-8" style="float: left;">
+                    <div class="demo-logo">
+                        <a class="navbar-brand" href="{{'homepage'|page}}"><img src="/themes/gcc/assets/images/logo.png"
+                                alt="شعار">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="demo-button">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navber-area">
+        <nav class="navbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="navbar-header pull-right">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">الملاحة تبديل</font>
+                                    </font>
+                                </span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="logo">
+                                <a class="navbar-brand" href="{{'homepage'|page}}"><img
+                                        src="/themes/gcc/assets/images/logo.png" alt="شعار">
+                                </a>
+                            </div>
+                        </div>
+                        <ul class="menu-sidebar pull-left">
+                                <div class="dropdown">
+                                        <button class="fa fa-language"></button>
+                                        <div class="dropdown-content">
+                                                <a class="social-ln" href="#" data-request="onSwitchLocale"
+                                                data-request-data="locale: 'en'">English</a>
+                                                <a class="social-ln" href="#" data-request="onSwitchLocale"
+                                                        data-request-data="locale: 'ar'">عربى</a>
+                                        </div>
+                                      </div> 
+                            <!-- employee login-->
+                            <div class="dropdown">
+                                    <button class="fa fa-user"></button>
+                                    <div class="dropdown-content">
+                                            <a class="social-ln" href="https://mail.office365.com/">Mail</a>
+                                            <a class="social-ln"
+                                                    href="http://213.236.57.76/Citrix/AccessPlatform/auth/login.aspx">GCC
+                                                    Citrix</a>
+                                                    <a class="social-ln" href="http://37.224.46.131/">Citrix Link</a>
+                                                    <a class="social-ln" href="http://77.110.119.150/">Citrix XAPP</a>
+                                    </div>
+                                  </div> 
+                            <!-- end employee login-->
+                        </ul>
+                        <div class="collapse navbar-collapse nav-menu pull-left" id="bs-example-navbar-collapse-1">
+                            <div class="nav-close-button">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </div>
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <a href="{{'contact'|page}}"
+                                        class="{% if this.page.id == 'contact' %}active{% endif %}">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">اتصل</font>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{'career'|page}}"
+                                        class="{% if this.page.id == 'career' %}active{% endif %}">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">وظائف</font>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li>
+                                    {% if this.page.id == 'homepage' %}
+                                    <a href="#" data-scroll-nav="6">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">فرصة
+                                                عمل</font>
+                                        </font>
+                                    </a>
+                                    {% else %}
+                                    <a href="{{'homepage'|page}}">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">فرصة
+                                                عمل</font>
+                                        </font>
+                                    </a>
+                                    {% endif %}
+                                </li>
+                                <li>
+                                    {% if this.page.id == 'homepage' %}
+                                    <a href="#" data-scroll-nav="5">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">عملاء</font>
+                                        </font>
+                                    </a>
+                                    {% else %}
+                                    <a href="{{'homepage'|page}}">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">عملاء</font>
+                                        </font>
+                                    </a>
+                                    {% endif %}
+                                </li>
+                                <li>
+                                    {% if this.page.id == 'homepage' %}
+                                    <a href="#" data-scroll-nav="4">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">أخبار</font>
+                                        </font>
+                                    </a>
+                                    {% else %}
+                                    <a href="{{'homepage'|page}}">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">أخبار</font>
+                                        </font>
+                                    </a>
+                                    {% endif %}
+                                </li>
+                                <li>
+                                    {% if this.page.id == 'homepage' %}
+                                    <a href="#" data-scroll-nav="3">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">مشاريع</font>
+                                        </font>
+                                    </a>
+                                    {% else %}
+                                    <a href="{{'homepage'|page}}">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">مشاريع</font>
+                                        </font>
+                                    </a>
+                                    {% endif %}
+                                </li>
+                                <li>
+                                    {% if this.page.id == 'homepage' %}
+                                    <a href="#" data-scroll-nav="2">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">خدمات</font>
+                                        </font>
+                                    </a>
+                                    {% else %}
+                                    <a href="{{'homepage'|page}}">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">خدمات</font>
+                                        </font>
+                                    </a>
+                                    {% endif %}
+                                </li>
+                              <!--   <li>
+                                    {% if this.page.id == 'homepage' %}
+                                    <a href="#" data-scroll-nav="1">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">حول</font>
+                                        </font>
+                                    </a> -->
+                                    <!---->
+                                    <li class="nav-item dropdown">
+                                            <a href="#corporate" class="nav-link dropdown-toggle:hover" data-toggle="dropdown">حول</a>
+                                            <div class="dropdown-menu">
+                                                <a href="#corporate-projects" class="dropdown-item">مشاريع الشركة</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="#ceo-message" class="dropdown-item">رسالة الرئيس التنفيذي</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="#gcc-milestone" class="dropdown-item">تاريخنا</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="#vision-mission" class="dropdown-item">الرؤية والرسالة</a>
+                                            </div>
+                                        </li>
+                                    <!---->
+                  <!--                   {% else %}
+                                    <a href="{{'homepage'|page}}">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">حول</font>
+                                        </font>
+                                    </a>
+                                    {% endif %}
+                                </li> -->
+                                <li id="mobile-lan-icon">
+                                    <a class="social-ln" data-request="onSwitchLocale" data-request-data="locale: 'en'"
+                                        href="#" style="padding-right: 20px;">English</a>
+                                    <a data-request="onSwitchLocale" data-request-data="locale: 'ar'" href="#"
+                                        class="social-ln"
+                                        style="padding-left: 20px; border-left: 1px solid #fff;">عربى</a>
+                                </li>
+                                <li id="mobile-login-icon"><a href="#"><i
+                                            class="fa fa-user"></i>&nbsp;&nbsp;&nbsp;Login</a>
+                                </li>
+                                <li id="mobile-lan-icon">
+                                    <ul>
+                                        <li><a class="social-ln" href="https://mail.office365.com/">Mails</a></li>
+                                        <li><a class="social-ln"
+                                                href="http://213.236.57.76/Citrix/AccessPlatform/auth/login.aspx">GCC
+                                                Citrix</a></li>
+                                        <li><a class="social-ln" href="http://37.224.46.131/">Citrix Link</a></li>
+                                        <li><a class="social-ln" href="http://77.110.119.150/">Citrix XAPP</a></li>
+                                    </ul>
+                            </ul>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    {% endif %}
+</div>

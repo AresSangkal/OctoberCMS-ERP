@@ -1,0 +1,54 @@
+title = "Detail News"
+url = "/detail-news/:slug"
+layout = "default"
+is_hidden = 0
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "news-category"
+
+[searchForm]
+resultPage = "news-search"
+categoryFilter = 0
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "news-category"
+==
+<section class="contact">
+    <div class="part-top mb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading prallex-heading">
+                        <h2>{{post.title}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mt20">
+            <div class="col-md-8">
+                <div class="card custom-card">
+                    {% component 'blogPost' %}
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card custom-card">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a class="text-center center-block view-more-button mb-15 btn-custom-link"
+                               style="max-width: 50%;" href="{{'news'|page}}">{{ 'All News'|_ }}</a>
+
+                            {% component 'searchForm' %}
+                        </div>
+                    </div>
+                    {% component 'blogCategories' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

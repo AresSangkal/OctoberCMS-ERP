@@ -1,0 +1,27 @@
+columns:
+    first_name:
+        label: 'First Name'
+        type: text
+        searchable: true
+        sortable: true
+    last_name:
+        label: 'Last Name'
+        type: text
+        searchable: true
+        sortable: true
+    vacancy:
+        label: 'Vacancy'
+        relation: vacancy
+        select: title
+    updated_at:
+        label: 'Date Modified'
+        type: datetime
+        sortable: true
+    admin_approval:
+        label: 'Status'
+        type: partial
+        path: status_column
+    actions:
+        label: Actions
+        type: partial
+        clickable: false

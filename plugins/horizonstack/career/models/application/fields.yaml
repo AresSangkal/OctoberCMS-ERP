@@ -1,0 +1,74 @@
+tabs:
+    fields:
+        first_name:
+            label: 'First Name'
+            span: auto
+            type: text
+            tab: 'Basic'
+        last_name:
+            label: 'Last Name'
+            span: auto
+            type: text
+            tab: 'Basic'
+        nat_id:
+            label: 'NAT ID'
+            span: auto
+            type: number
+            tab: 'Basic'
+        email:
+            label: 'Email'
+            span: auto
+            type: text
+            tab: 'Basic'
+        mobile:
+            label: 'Mobile'
+            span: auto
+            type: number
+            tab: 'Basic'
+        vacancy:
+            label: 'Vacancy'
+            span: auto
+            type: relation
+            select: title
+            tab: 'Basic'
+        location:
+            label: 'Location'
+            span: auto
+            type: text
+            tab: 'Basic'
+        linkedin_link:
+            label: 'linkedIn Profile link'
+            span: auto
+            type: text
+            tab: 'Basic'
+        languages:
+            label: 'Languages'
+            span: auto
+            type: relation
+            select: name
+            tab: 'Basic'
+        educations:
+            label: 'Educations & Qualifications'
+            span: auto
+            type: partial
+            path: field_educations
+            tab: 'Educations & Experiences'
+        experiences:
+            label: 'Experiences'
+            span: auto
+            type: partial
+            path: field_experiences
+            tab: 'Educations & Experiences'
+        certifications:
+            label: 'Certifications'
+            span: auto
+            type: partial
+            path: field_certifications
+            tab: 'Skills & Certifications'
+        skills:
+            label: 'Skills'
+            type: taglist
+            mode: relation
+            span: right
+            tab: 'Skills & Certifications'
+

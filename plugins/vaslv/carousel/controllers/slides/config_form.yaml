@@ -1,0 +1,10 @@
+name: Slides
+form: $/vaslv/carousel/models/slide/fields.yaml
+modelClass: Vaslv\Carousel\Models\Slide
+defaultRedirect: vaslv/carousel/slides
+create:
+    redirect: 'vaslv/carousel/slides/update/:id'
+    redirectClose: vaslv/carousel/slides
+update:
+    redirect: vaslv/carousel/slides
+    redirectClose: vaslv/carousel/slides

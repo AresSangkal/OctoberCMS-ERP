@@ -1,0 +1,26 @@
+columns:
+    title:
+        label: Title
+        type: text
+        searchable: true
+        sortable: true
+    category:
+        label: Category
+        relation: category
+        select: name
+    is_active:
+        label: Active
+        type: switch
+        sortable: true
+    date_posted:
+        label: 'Date Posted'
+        type: datetime
+        sortable: true
+    expiry_date:
+        label: 'Expiry Date'
+        type: datetime
+        sortable: true
+    updated_at:
+        label: 'Date Modified'
+        type: datetime
+        sortable: true

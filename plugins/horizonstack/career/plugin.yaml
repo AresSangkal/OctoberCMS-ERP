@@ -1,0 +1,60 @@
+plugin:
+    name: 'horizonstack.career::lang.plugin.name'
+    description: 'horizonstack.career::lang.plugin.description'
+    author: Horizonstack
+    icon: oc-icon-briefcase
+    homepage: ''
+permissions:
+    horizonstack.career.manage_vacancies:
+        tab: 'horizonstack.career::lang.plugin.name'
+        label: 'horizonstack.career::lang.permissions.vacancies'
+    horizonstack.career.manage_categories:
+        tab: 'horizonstack.career::lang.plugin.name'
+        label: 'horizonstack.career::lang.permissions.categories'
+    horizonstack.career.manage_applications:
+        tab: 'horizonstack.career::lang.plugin.name'
+        label: 'horizonstack.career::lang.permissions.applications'
+    horizonstack.career.manage_languages:
+        tab: 'horizonstack.career::lang.plugin.name'
+        label: 'horizonstack.career::lang.permissions.languages'
+    horizonstack.career.manage_skills:
+        tab: 'horizonstack.career::lang.plugin.name'
+        label: 'horizonstack.career::lang.permissions.skills'
+navigation:
+    careers:
+        label: Career
+        url: horizonstack/career/vacancies
+        icon: icon-suitcase
+        permissions:
+            - horizonstack.career.manage_vacancies
+        sideMenu:
+            vacancies:
+                label: Vacancies
+                url: horizonstack/career/vacancies
+                icon: icon-database
+                permissions:
+                    - horizonstack.career.manage_vacancies
+            categories:
+                label: Categories
+                url: horizonstack/career/categories
+                icon: icon-sitemap
+                permissions:
+                    - horizonstack.career.manage_categories
+            applications:
+                label: Applications
+                url: horizonstack/career/applications
+                icon: icon-users
+                permissions:
+                    - horizonstack.career.manage_applications
+            languages:
+                label: Languages
+                url: horizonstack/career/languages
+                icon: icon-language
+                permissions:
+                    - horizonstack.career.manage_languages
+            skills:
+                label: Skills
+                url: horizonstack/career/skills
+                icon: icon-sliders
+                permissions:
+                    - horizonstack.career.manage_skills

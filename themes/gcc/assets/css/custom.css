@@ -1,0 +1,407 @@
+.thm-clr{
+    color: #d4302c !important;
+}
+.banner-center-content p{
+    color: #ffffff;
+    font-weight: 800;
+}
+.section-heading {
+    padding-bottom: 0px;
+}
+.pdt125{
+    padding-top: 125px;
+}
+.rmargin{
+    padding: 20px 0px;
+}
+#marv-services .part-top:before {
+    position: absolute;
+    content: '';
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.order-list-number li{
+    list-style-type: decimal;
+}
+.demo-navber .demo-logo {
+    padding-bottom: 0px;
+}
+#mobile-lan-icon, #mobile-login-icon{
+    display: none;
+}
+@media (max-width: 991px){
+    .navber-area .nav-menu ul li a.active {
+        color: #000 !important;
+    }
+    #mobile-lan-icon, #mobile-login-icon{
+        display: inherit;
+    }
+}
+.panel.panel-newsletter {
+    background: url(../img/background-1702930_1920.jpg);
+    background-size: cover;
+    min-height: 250px;
+    padding-top: 30px;
+}
+.btn-ghost {
+    border: thin solid #ffffff;
+    background: transparent;
+    border-radius: 0;
+    color: #ffffff;
+    float: left;
+    margin-top: 10px;
+    transition: background linear .2s;
+}
+.btn-ghost:hover{
+    color: #333333;
+    background: #ffffff;
+}
+.footer{
+    background: #6d6d6d !important;
+}
+.custom-card{
+    box-shadow: 0px 8px 30px -20px rgba(0, 0, 0, 0.5) !important;
+    padding: 20px;
+    margin: 25px 0px;
+}
+.custom-card:hover{
+    border-bottom: 3px solid #d4302c;
+}
+textarea.form-control {
+    height: 128px;
+}
+.panel-heading{
+    background-color: #d4302c !important;
+    color: #ffffff !important;
+    border-color: #d4302c !important;
+    padding: 20px;
+}
+.panel-body{
+    border-color: #d4302c !important;
+}
+.panel-default {
+    border-color: #d4302c !important;
+}
+.copy-right{
+    margin-top: 50px;
+}
+.foot-links{
+    float: right;
+}
+@media only screen and (max-width : 636.5px) {
+    .copy-right{
+        margin-top: 20px !important;
+    }
+    .foot-links{
+        float: inherit;
+    }
+}
+
+/* timeline */
+.timeline {
+    position: relative;
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 1300px;
+    direction: initial !important;
+}
+.timeline:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    border: 1px solid #d4302c;
+    right: 40px;
+    top: 0;
+}
+.timeline:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+@media screen and (min-width: 700px) {
+    .timeline {
+        padding: 2rem;
+    }
+    .timeline:before {
+        left: calc(50% - 1px);
+        right: auto;
+    }
+}
+
+.timeline__item {
+    padding: 1rem;
+    border: 2px solid #d4302c;
+    border-image: linear-gradient(to right, #000 0%, #d4302c 100%);
+    border-image-slice: 1;
+    position: relative;
+    margin: 1rem 3rem 1rem 1rem;
+    clear: both;
+}
+.timeline__item:after, .timeline__item:before {
+    content: '';
+    position: absolute;
+}
+.timeline__item:before {
+    right: -10px;
+    top: calc(50% - 5px);
+    border-style: solid;
+    border-color: #d4302c #d4302c transparent transparent;
+    border-width: 10px;
+    transform: rotate(45deg);
+}
+@media screen and (min-width: 700px) {
+    .timeline__item {
+        width: 44%;
+        margin: 1rem;
+    }
+    .timeline__item:nth-of-type(2n) {
+        float: right;
+        margin: 1rem;
+        border-image: linear-gradient(to right, #d4302c 0%, #000 100%);
+        border-image-slice: 1;
+    }
+    .timeline__item:nth-of-type(2n):before {
+        right: auto;
+        left: -10px;
+        border-color: transparent transparent #d4302c #d4302c;
+    }
+}
+
+.timeline__item--year {
+    text-align: center;
+    max-width: 150px;
+    margin: 0 48px 0 auto;
+    font-size: 1.8rem;
+    background-color: #333;
+    line-height: 1;
+    border-image: none;
+    padding: .5rem 1rem 1rem;
+    color: #ffffff;
+}
+.timeline__item--year:before {
+    display: none;
+}
+@media screen and (min-width: 700px) {
+    .timeline__item--year {
+        text-align: center;
+        margin: 0 auto;
+    }
+    .timeline__item--year:nth-of-type(2n) {
+        float: none;
+        margin: 0 auto;
+        border-image: none;
+    }
+    .timeline__item--year:nth-of-type(2n):before {
+        display: none;
+    }
+}
+
+.timeline__title {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+}
+
+.timeline__blurb {
+    line-height: 1.5;
+    font-size: 1rem;
+    margin: .5rem 0 0;
+}
+.banner-center-content h1 {
+    font-size: 65px;
+}
+.slideouticons .iconswrapper ul li a {
+    border-radius: 1%;
+}
+.slideouticons .iconswrapper ul li{
+    width: auto !important;
+}
+.social-ln:hover{
+    /*background-color: #d4302c !important; */
+    color: red !important;
+}
+.nav-menu ul li {
+    padding: 15px 10px;
+    font-size: 12px;
+}
+li.marv-share {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+@media (max-width: 1200px){
+    .nav-menu ul li {
+        padding: 15px 7px;
+        font-size: 10px;
+    }
+}
+@media (max-width: 991px) {
+    .banner-center-content h1 {
+        font-size: 25px !important;
+    }
+    .navber-area .nav-menu ul li a:hover {
+         color: #000;
+    }
+}
+.nav-close-button {
+    padding-bottom: 0px;
+}
+.our-projects ol li{
+    border-bottom: 1px solid #d4d1d2;
+    margin-top: 10px;
+}
+
+.pr-0 {
+    padding-right: unset !important;
+}
+
+.vacancies-table th {
+    color: #d4302c;
+}
+
+.vacancies-table td {
+    padding: 18px !important;
+}
+
+.title-background {
+    position: relative;
+    padding-top: 130px !important;
+    background-color: #5D5D5D;
+}
+
+.card-border {
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+.mb-15 {
+    margin-bottom: 15px !important;
+}
+.mb-20 {
+    margin-bottom: 20px !important;
+}
+.mt-32 {
+    margin-top: 32px !important;
+}
+.mb-25 {
+    margin-bottom: 25px !important;
+}
+.mb-30 {
+    margin-bottom: 30px !important;
+}
+.mx-0 {
+    margin-left: unset !important;
+    margin-right: unset !important;
+}
+
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.card-body {
+    padding: .75rem 1.25rem;
+}
+
+.view-more-button {
+    text-align: center;
+    font-size: 1.8rem;
+    background-color: #333;
+    line-height: 1;
+    padding: .7rem 1rem;
+    color: #ffffff;
+    border: 2px solid #d4302c;
+}
+
+.btn-custom-link:hover, .btn-custom-link:focus, .btn-custom-link:active, .btn-custom-link.active, .open>.dropdown-toggle.btn-custom-link {
+    color: #fff;
+    background-color: #d4302c;
+    border-color: #d4302c; /*set the color you want here*/
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    color: #fff !important;
+    background-color: #d4302c;
+    border-color: #d4302c;
+}
+
+.list-group-item.active a {
+    color: #fff !important;
+}
+
+.logo {
+    display: block;
+    height: auto;
+    width: 200px;
+    padding-top: 5px;
+    margin-right: 15px;
+}
+
+/* */
+.fa-language{
+    color:white;
+    background-color:rgba(255, 0, 0, 0.884);
+    border-radius: 50%;
+    border-width: 0px;
+    padding: 15px;
+}
+
+.fa-user{
+    color:white;
+    background-color:rgba(255, 0, 0, 0.884);
+    border-radius: 50%;
+    border-width: 0px;
+    padding: 15px;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 50px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.534);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-content a:hover { color:orange;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+   .dropdown:hover .fa {background-color: #ffffff;}
+
+   .dropdown:hover .fa-language {color: red;}
+   .dropdown:hover .fa-user {color: red;}
+
+
+   .dropdown-menu {
+    background-color:rgba(0, 0, 0, 0.5);
+    width: 200px;
+}
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
+    background-color: rgba(219, 22, 22, 0);
+    border-color: #337AB7;
+}

@@ -1,0 +1,66 @@
+fields:
+    name:
+        label: 'vaslv.carousel::lang.models.carousel.fields.name.label'
+        span: full
+        required: 1
+        type: text
+    do_resize:
+        label: 'vaslv.carousel::lang.models.carousel.fields.do_resize.label'
+        span: full
+        type: switch
+        comment: 'vaslv.carousel::lang.models.carousel.fields.do_resize.comment'
+    image_width:
+        label: 'vaslv.carousel::lang.models.carousel.fields.image_width.label'
+        span: left
+        default: '1110'
+        required: 1
+        type: number
+        comment: 'vaslv.carousel::lang.models.carousel.fields.image_width.comment'
+    image_height:
+        label: 'vaslv.carousel::lang.models.carousel.fields.image_height.label'
+        span: right
+        default: '400'
+        required: 1
+        type: number
+        comment: 'vaslv.carousel::lang.models.carousel.fields.image_height.comment'
+    interval:
+        label: 'vaslv.carousel::lang.models.carousel.fields.interval.label'
+        span: left
+        default: '5000'
+        required: 1
+        type: number
+        comment: 'vaslv.carousel::lang.models.carousel.fields.interval.comment'
+    with_controls:
+        label: 'vaslv.carousel::lang.models.carousel.fields.with_controls.label'
+        span: left
+        type: switch
+        comment: 'vaslv.carousel::lang.models.carousel.fields.with_controls.comment'
+    with_indicators:
+        label: 'vaslv.carousel::lang.models.carousel.fields.with_indicators.label'
+        span: left
+        type: switch
+        comment: 'vaslv.carousel::lang.models.carousel.fields.with_indicators.comment'
+    has_keyboard_react:
+        label: 'vaslv.carousel::lang.models.carousel.fields.has_keyboard_react.label'
+        span: left
+        default: 1
+        type: switch
+        comment: 'vaslv.carousel::lang.models.carousel.fields.has_keyboard_react.comment'
+    has_hover_pause:
+        label: 'vaslv.carousel::lang.models.carousel.fields.has_hover_pause.label'
+        span: left
+        default: 1
+        type: switch
+        comment: 'vaslv.carousel::lang.models.carousel.fields.has_hover_pause.comment'
+    has_autoplays:
+        label: 'vaslv.carousel::lang.models.carousel.fields.has_autoplays.label'
+        span: left
+        default: 1
+        type: switch
+        comment: 'vaslv.carousel::lang.models.carousel.fields.has_autoplays.comment'
+    has_continuously_cycle:
+        label: 'vaslv.carousel::lang.models.carousel.fields.has_continuously_cycle.label'
+        span: left
+        default: 1
+        type: switch
+        comment: 'vaslv.carousel::lang.models.carousel.fields.has_continuously_cycle.comment'

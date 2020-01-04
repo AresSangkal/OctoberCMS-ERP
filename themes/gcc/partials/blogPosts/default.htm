@@ -1,0 +1,58 @@
+{% set posts = __SELF__.posts %}
+
+
+{% for post in posts %}
+<div class="card custom-card">
+    <div class="row">
+        <div class="col-md-12">
+            <h4>
+                <a class="text-muted" href="{{ post.url }}">{{ post.title }}</a>
+            </h4>
+            <p class="info">
+                Posted
+                {% if post.categories.count %} in {% endif %}
+                {% for category in post.categories %}
+                <a class="thm-clr" href="{{ 'news-category'|page({ slug: category.slug }) }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+                {% endfor %}
+                on {{ post.published_at|date('M d, Y') }}
+            </p>
+        </div>
+    </div>
+    <div class="row rmargin">
+        <div class="col-md-4">
+            <a href="{{ post.url }}">
+                {% if post.featured_images|length %}
+                <img src="{{post.featured_images[0].path}}" class="img-responsive">
+                {% else %}
+                <img src="/themes/gcc/assets/img/news/5552643438_18f562599c_o.jpg" class="img-responsive">
+                {% endif %}
+            </a>
+        </div>
+        <div class="col-md-8">
+            <p class="excerpt">{{ post.summary|raw }}</p>
+        </div>
+    </div>
+</div>
+{% else %}
+<p class="no-data">{{ noPostsMessage }}</p>
+{% endfor %}
+
+{% if posts.lastPage > 1 %}
+<ul class="pagination">
+    {% if posts.currentPage > 1 %}
+    <li><a href="{{ this.page.baseFileName|page({ (__SELF__.pageParam): (posts.currentPage-1) }) }}">&larr; Prev</a>
+    </li>
+    {% endif %}
+
+    {% for page in 1..posts.lastPage %}
+    <li class="{{ posts.currentPage == page ? 'active' : null }}">
+        <a href="{{ this.page.baseFileName|page({ (__SELF__.pageParam): page }) }}">{{ page }}</a>
+    </li>
+    {% endfor %}
+
+    {% if posts.lastPage > posts.currentPage %}
+    <li><a href="{{ this.page.baseFileName|page({ (__SELF__.pageParam): (posts.currentPage+1) }) }}">Next &rarr;</a>
+    </li>
+    {% endif %}
+</ul>
+{% endif %}

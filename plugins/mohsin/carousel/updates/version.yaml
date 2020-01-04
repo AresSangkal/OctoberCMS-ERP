@@ -1,0 +1,12 @@
+1.0.1:
+  - First version of Carousel
+  - Create Carousels Table
+  - create_carousels_table.php
+1.0.2: Improved HTML semantics and language support.
+1.0.3: Minor improvements.
+1.0.4: Bug fix for multiple carousel components in same page.
+1.0.5:
+  - !!! Developer can now chose display carousels section in navigation menu or settings page.
+1.0.6:
+  - Show caption only if there is image title or description
+1.0.7: Caption is now available only if title or description was added. Thanks @Gabriele

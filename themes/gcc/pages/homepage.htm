@@ -1,0 +1,292 @@
+title = "Homepage"
+url = "/"
+layout = "default"
+is_hidden = 0
+
+[homepageBlogs]
+
+[carousel]
+id = 1
+==
+<section class="bg_secondry">
+    <div class="home-content">
+            <div class="project-slider">
+                    <canvas id="particles-js"></canvas>
+                    <div id="project-slider" class="carousel slide" data-ride="carousel">
+
+                            <!-- Indicators -->
+            
+                          <!--   <ol class="carousel-indicators">
+            
+                                <li data-target="#project-slider" data-slide-to="1" class="active"></li>
+            
+                                <li data-target="#project-slider" data-slide-to="2"></li>
+            
+                                <li data-target="#project-slider" data-slide-to="3"></li>
+            
+                            </ol> -->
+            
+            
+            
+                            <!-- Wrapper for slides -->
+            
+                            <div class="carousel-inner" role="listbox">
+            
+                                <div class="item active slide1">                       
+            
+                                    <div class="carousel-caption" id="caption-1">
+            
+                                        <h3>welcome to Gulf Gonsolidated Contractors</h3>
+            
+                                        <p>GCC is in the lead when it comes to Plant and Pipeline Construction</p>
+            
+                                    </div>
+            
+                                </div>
+            
+                                <div class="item slide2">                        
+            
+                                    <div class="carousel-caption" id="caption-2">
+            
+                                        <h2 style="color:floralwhite">Vision</h2>
+            
+                                        <p>To be the partner of choice for industrial projects and
+                                            associated services to the industrial sectors.</p>
+                                        
+                                             <h2 style="color:floralwhite">Mission</h2>
+            
+                                        <p>I meet the expectations of our clients, shareholders and
+                                            employees.</p>
+            
+                                    </div>
+            
+                                </div>
+            
+                                <div class="item slide3">                        
+            
+                                    <div class="carousel-caption" id="caption-3">
+                                            <h3>Our Services</h3>
+                                      <img src="/themes/gcc/assets/img/carousel/GCC_services@3x.png" alt="services">
+                                      
+            
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+            
+            
+            
+                            <!-- Controls -->
+            
+                            <a class="left carousel-control" href="#project-slider" role="button" data-slide="prev">
+            
+                                <span class="fa fa-angle-double-left fa-3x" aria-hidden="true"></span>
+            
+                                <span class="sr-only">Previous</span>
+            
+                            </a>
+            
+                            <a class="right carousel-control" href="#project-slider" role="button" data-slide="next">
+            
+                                <span class="fa fa-angle-double-right fa-3x" aria-hidden="true"></span>
+            
+                                <span class="sr-only">Next</span>
+            
+                            </a>
+            
+                        </div>
+            
+                    </div>
+            </div>
+        </div>
+        </section>
+
+<!-- Start About Area -->
+<!-- <div id="linear1" class="pattern">
+    <section class="section-padding {% if activeLocale == 'ar' %}dir-rtl{% endif %}" id="marv-about"
+        data-scroll-index="1" style="padding-bottom: 80px;"> -->
+        <section id="marv-services" class="contact" data-scroll-index="2">
+                <div id="linear1" class="pattern">
+                    <div class="part-top" style="background-image: url(/themes/gcc/assets/images/bg2.jpg);">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="section-heading prallex-heading" style="margin-bottom: 0px;">
+                                            <h2>{{ 'About'|_ }} <span>{{ 'GCC'|_ }}</span></h2>
+                                    </div>
+                                </div>
+            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part-bottom" style="margin-top: 50px;">
+                        <div class="card custom-card" id="corporate-projects">
+                            {% content 'corporate-projects' %}
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="marv-services" class="contact" data-scroll-index="2">
+                    <div id="linear1" class="pattern">
+                        <div class="part-top" style="background-image: url(/themes/gcc/assets/images/bg2.jpg);">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="section-heading prallex-heading" style="margin-bottom: 0px;">
+                                                <h2>{{ 'CEO'|_ }} <span>{{ 'Message'|_ }}</span></h2>
+                                        </div>
+                                    </div>
+                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part-bottom" style="margin-top: 50px;">
+                            <div class="card custom-card" id="corporate-projects">{% content 'ceo-message' %}</div>
+                        </div>
+                    </div>
+                </section>         
+                <section id="marv-services" class="contact" data-scroll-index="2">
+                        <div id="linear1" class="pattern">
+                            <div class="part-top" style="background-image: url(/themes/gcc/assets/images/bg2.jpg);">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="section-heading prallex-heading" style="margin-bottom: 0px;">
+                                                    <h2>{{ 'History'|_ }} <span>{{ 'Milestone'|_ }}</span></h2>
+                                            </div>
+                                        </div>
+                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="part-bottom" style="margin-top: 50px;">
+                                <div class="card custom-card" id="corporate-projects">{% content 'gcc-milestone' %}</div>
+                            </div>
+                        </div>
+                    </section> 
+                    <section id="marv-services" class="contact" data-scroll-index="2">
+                            <div id="linear1" class="pattern">
+                                <div class="part-top" style="background-image: url(/themes/gcc/assets/images/bg2.jpg);">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="section-heading prallex-heading" style="margin-bottom: 0px;">
+                                                        <h2>{{ 'Vision'|_ }} <span>{{ 'Mission'|_ }}</span></h2>
+                                                </div>
+                                            </div>
+                        
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="part-bottom" style="margin-top: 50px;">
+                                    <div class="card custom-card" id="corporate-projects">{% content 'vision-mission' %}</div>
+                                </div>
+                            </div>
+                        </section> 
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- // End About Area -->
+
+<section id="marv-services" class="contact" data-scroll-index="2">
+    <div id="linear1" class="pattern">
+        <div class="part-top" style="background-image: url(/themes/gcc/assets/images/bg2.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-heading prallex-heading" style="margin-bottom: 0px;">
+                            <h2>{{ 'Operation'|_ }} <span>{{ 'Services'|_ }}</span></h2>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="part-bottom" style="margin-top: 50px;">
+            {% content 'operation-services' %}
+        </div>
+    </div>
+</section>
+
+<section class="contact" data-scroll-index="3">
+    <div id="linear1" class="pattern">
+        <div class="part-top" style="background-image: url(/themes/gcc/assets/img/inner/projects.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-heading prallex-heading" style="margin-bottom: 0px;">
+                            <h2>{{ 'Our'|_ }} <span>{{ 'Projects'|_ }}</span></h2>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="part-bottom our-projects" style="margin-top: 50px;">
+            {% content 'our-projects' %}
+        </div>
+    </div>
+</section>
+
+<section class="contact {% if activeLocale == 'ar' %}dir-rtl{% endif %}" data-scroll-index="4">
+    <div id="linear1" class="pattern">
+        <div class="part-top" style="background-image: url(/themes/gcc/assets/img/inner/news.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-heading prallex-heading" style="margin-bottom: 0px;">
+                            <h2>{{ 'News'|_ }} <span>{{ 'And'|_ }}</span> {{ 'Media'|_ }}</h2>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="part-bottom {% if activeLocale == 'ar' %}dir-rtl{% endif %}" style="margin-top: 50px;">
+            {% component 'homepageBlogs' %}
+        </div>
+    </div>
+</section>
+
+
+
+<section data-scroll-index="5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h2 style="margin-bottom:45px">{{ 'OurC'|_ }} <span>{{ 'Clients'|_ }}</span></h2>
+                    {% content 'clients' %}
+                    <!-- Clients grid -->
+
+                    <!-- End Clients grid-->
+                </div>
+            </div>
+            <!-- <div class="row mt80">
+            <div class="container">
+                <img src="/themes/gcc/assets/images/clients.png" style="width: 100%;">
+            </div>
+        </div> -->
+        </div>
+    </div>
+</section>
+
+<section class="section-padding {% if activeLocale == 'ar' %}dir-rtl{% endif %}" data-scroll-index="6">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h2>{{'Business'|_}} <span>{{'Opportunity'|_}}</span></h2>
+                </div>
+            </div>
+        </div>
+        <div class="row mt80">
+            {% content 'business-opportunity' %}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,57 @@
+title = "News Category"
+url = "/news/category/:slug/:page?"
+layout = "default"
+is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "{{ :slug }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "news-category"
+postPage = "detail-news"
+
+[searchForm]
+resultPage = "news-search"
+categoryFilter = 0
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "news-category"
+==
+<section class="contact">
+    <div class="part-top mb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading prallex-heading">
+                        <h2><span>{{category.name}}</span> - Category</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mt20">
+            <div class="col-md-8">
+                {% component 'blogPosts' %}
+            </div>
+            <div class="col-md-4">
+                <div class="card custom-card">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a class="text-center center-block view-more-button mb-15 btn-custom-link"
+                               style="max-width: 50%;" href="{{'news'|page}}">{{ 'All News'|_ }}</a>
+
+                            {% component 'searchForm' %}
+                        </div>
+                    </div>
+                    {% component 'blogCategories' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

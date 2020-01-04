@@ -1,0 +1,16 @@
+columns:
+    title:
+        label: Title
+        type: text
+        searchable: true
+        sortable: true
+    start_date:
+        label: 'Start date'
+        type: date
+    finish_date:
+        label: 'Finish date'
+        type: date
+    updated_at:
+        label: 'Date Modified'
+        type: datetime
+        sortable: true

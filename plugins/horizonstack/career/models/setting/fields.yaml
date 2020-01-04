@@ -1,0 +1,10 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+tabs:
+  fields:
+    emails:
+      label: Email
+      comment: Comma separated emails
+      tab: 'Emails'

@@ -1,0 +1,31 @@
+{% for vacancy in vacancies %}
+<tr>
+    <td>
+        {{vacancy.lang('activeLocale').title}}
+    </td>
+    <td>
+        {{vacancy.category.lang('activeLocale').name}}
+    </td>
+    <td>
+        {% if activeLocale == 'ar' %}
+        {{vacancy.date_posted| localizeddate('long', 'short', 'ar') }}
+        {% else %}
+        {{vacancy.date_posted|date}}
+        {% endif %}
+    </td>
+    <td>
+        {% if activeLocale == 'ar' %}
+        {{vacancy.expiry_date| localizeddate('long', 'short', 'ar') }}
+        {% else %}
+        {{vacancy.expiry_date|date}}
+        {% endif %}
+    </td>
+    <td>
+        <a href="/vacancy/{{vacancy.slug}}/{{vacancy.job_app_no}}/apply" class="btn btn-primary">{{'Apply'|_}}</a>
+    </td>
+</tr>
+{% else %}
+<tr>
+    <td colspan="4" class="text-center h4">No vacancies found.</td>
+</tr>
+{% endfor %}

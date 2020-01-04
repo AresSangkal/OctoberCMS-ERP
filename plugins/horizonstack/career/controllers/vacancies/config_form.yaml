@@ -1,0 +1,10 @@
+name: Vacancies
+form: $/horizonstack/career/models/vacancy/fields.yaml
+modelClass: Horizonstack\Career\Models\Vacancy
+defaultRedirect: horizonstack/career/vacancies
+create:
+    redirect: 'horizonstack/career/vacancies/update/:id'
+    redirectClose: horizonstack/career/vacancies
+update:
+    redirect: horizonstack/career/vacancies
+    redirectClose: horizonstack/career/vacancies

@@ -1,0 +1,64 @@
+<div class="table-responsive mt40">
+    <table class="table table-centered table-striped table-hover w-100 dt-responsive nowrap vacancies-table">
+        <thead class="thead-light">
+        <tr>
+            <th class="all">{{'Job Title'|_}}</th>
+            <th>{{'Category'|_}}</th>
+            <th>{{'Date Posted'|_}}</th>
+            <th>{{'Expiry Date'|_}}</th>
+            <th>{{'Actions'|_}}</th>
+        </tr>
+        </thead>
+        <tbody id="vacancies-table">
+        {% partial '@vacancies-table' vacancies=vacancies %}
+        </tbody>
+    </table>
+</div>
+
+<div class="d-flex flex-row justify-content-center" id="vacancies-pagination">
+    {% partial '@vacancies-pagination' vacancies=vacancies %}
+</div>
+
+
+{% put javascript %}
+<script>
+    $("#category-filter").on('change', function () {
+        $('form').request('onPageChangeFilter', {
+            update: {
+                '@vacancies-table': '#vacancies-table',
+                '@vacancies-pagination': '#vacancies-pagination'
+            },
+            data: {
+                category: $('#category-filter').val(),
+            },
+            loading: $.oc.stripeLoadIndicator.show(),
+            complete: function () {
+                $.oc.stripeLoadIndicator.hide()
+            }
+        })
+    });
+
+    $(document).on('click', '.paginate-list, .category-filter', function () {
+
+        var page = $(this).data('page');
+        if (!page) {
+            page = 1;
+        }
+
+        $('form').request('onPageChangeFilter', {
+            update: {
+                '@vacancies-table': '#vacancies-table',
+                '@vacancies-pagination': '#vacancies-pagination'
+            },
+            data: {
+                tour_operator_type: $('#category-filter').val(),
+                page: page,
+            },
+            loading: $.oc.stripeLoadIndicator.show(),
+            complete: function () {
+                $.oc.stripeLoadIndicator.hide()
+            }
+        })
+    });
+</script>
+{% endput %}

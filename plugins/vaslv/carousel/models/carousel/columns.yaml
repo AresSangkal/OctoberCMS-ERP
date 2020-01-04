@@ -1,0 +1,46 @@
+columns:
+    name:
+        label: 'vaslv.carousel::lang.models.carousel.fields.name.label'
+        type: text
+        searchable: true
+        sortable: true
+    interval:
+        label: 'vaslv.carousel::lang.models.carousel.fields.interval.label'
+        type: number
+        sortable: true
+    do_resize:
+        label: 'vaslv.carousel::lang.models.carousel.fields.do_resize.label'
+        type: switch
+        sortable: true
+    with_controls:
+        label: 'vaslv.carousel::lang.models.carousel.fields.with_controls.label'
+        type: switch
+        sortable: true
+    with_indicators:
+        label: 'vaslv.carousel::lang.models.carousel.fields.with_indicators.label'
+        type: switch
+        sortable: true
+    has_keyboard_react:
+        label: 'vaslv.carousel::lang.models.carousel.fields.has_keyboard_react.label'
+        type: switch
+        sortable: true
+    has_hover_pause:
+        label: 'vaslv.carousel::lang.models.carousel.fields.has_hover_pause.label'
+        type: switch
+        sortable: true
+    has_autoplays:
+        label: 'vaslv.carousel::lang.models.carousel.fields.has_autoplays.label'
+        type: switch
+        sortable: true
+    has_continuously_cycle:
+        label: 'vaslv.carousel::lang.models.carousel.fields.has_continuously_cycle.label'
+        type: switch
+        sortable: true
+    created_at:
+        label: 'vaslv.carousel::lang.models.carousel.fields.created_at.label'
+        type: datetime
+        sortable: true
+    updated_at:
+        label: 'vaslv.carousel::lang.models.carousel.fields.updated_at.label'
+        type: datetime
+        sortable: true

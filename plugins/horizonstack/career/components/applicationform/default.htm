@@ -1,0 +1,296 @@
+<div class="col-md-6">
+    <div class="card card-border mb-3">
+        <div class="card-header">{{vacancy.lang('activeLocale').title}}</div>
+        <div class="card-body">
+            <p class="badge badge-success">{{vacancy.lang('activeLocale').category.name}}</p>
+            <p><strong>Expiry Date:</strong> {{vacancy.expiry_date| localizeddate('medium', 'short', activeLocale)}}</p>
+            <h5 class="card-title">{{vacancy.lang('activeLocale').description|raw}}</h5>
+        </div>
+    </div>
+</div>
+<div class="col-md-6">
+    <h4 class="mb-15">Application Form</h4>
+    <form id="application-information-form" data-request="onSubmitApplication" data-request-flash="1"
+          data-request-success="$('#application-information-form').trigger('reset');">
+        <div class="row mx-0">
+            <div class="form-group col-md-6">
+                <input id="first_name" type="text" name="first_name" placeholder="First Name"
+                       class="form-control" required="required">
+            </div>
+            <div class="form-group col-md-6">
+                <input id="last_name" type="text" name="last_name" placeholder="Last Name"
+                       class="form-control" required="required">
+            </div>
+            <div class="form-group col-md-6">
+                <input id="nat_id" type="text" name="nat_id" placeholder="Nat ID"
+                       class="form-control" required="required">
+            </div>
+            <div class="form-group col-sm-6">
+                <input id="email" type="email" name="email" class="form-control"
+                       placeholder="Email" required="required">
+            </div>
+            <div class="form-group col-md-6">
+                <input id="mobile" type="text" name="mobile" placeholder="Mobile No"
+                       class="form-control" required="required">
+            </div>
+            <div class="form-group col-md-6">
+                <input id="location" type="text" name="location" placeholder="Location"
+                       class="form-control" required="required">
+            </div>
+
+            {% if vacancy.is_linkedin_required %}
+            <div class="form-group col-md-12">
+                <input id="linkedin_link" type="text" name="linkedin_link" placeholder="LinkedIn profile link: https://linkedin.com/in/username"
+                       class="form-control" required="required">
+            </div>
+            {% endif %}
+
+        </div>
+
+
+        <div class="col-sm-12">
+            <h5>Educations</h5>
+            <div class="repeater row" id="educations">
+                <div data-repeater-list="educations">
+                    <div data-repeater-item class="inline-form row mx-0 mb-15">
+                        <div class="col-md-6 col-sm-12">
+                            <label>Title</label>
+                            <input type="text" name="educations[title]"
+                                   class="form-control" required placeholder="Title"/>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <label>Location</label>
+                            <input type="text" name="educations[location]"
+                                   class="form-control" required placeholder="Location"/>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <label>Start Date</label>
+                            <input type="text" name="educations[start_date]"
+                                   class="form-control" required data-provide="datepicker" data-date-start-date="0"
+                                   data-date-autoclose="true"
+                                   placeholder="Start Date"/>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <label>Finish Date</label>
+                            <input type="text" required name="educations[finish_date]" data-date-start-date="0"
+                                   data-date-autoclose="true"
+                                   class="form-control" data-provide="datepicker" placeholder="Finish Date"/>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <label>Description</label>
+                            <input type="text" name="educations[description]"
+                                   class="form-control" placeholder="Description"/>
+                        </div>
+                        <div class="col-md-6 col-sm-12 mt-32">
+                            <button data-repeater-delete type="button" class="btn btn-primary">Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <input data-repeater-create type="button" class="add-button btn btn-primary"
+                           value="+ Add Education"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12">
+            <h5>Experiences</h5>
+            <div class="repeater row" id="experiences">
+                <div data-repeater-list="experiences">
+                    <div data-repeater-item class="inline-form row mx-0 mb-15">
+                        <div class="col-md-6 col-sm-12">
+                            <label>Title</label>
+                            <input type="text" name="experiences[title]"
+                                   class="form-control" placeholder="Title"/>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <label>Location</label>
+                            <input type="text" required name="experiences[location]"
+                                   class="form-control" placeholder="Location"/>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <label>Start Date</label>
+                            <input type="text" required name="experiences[start_date]"
+                                   class="form-control" data-provide="datepicker" data-date-start-date="0"
+                                   data-date-autoclose="true"
+                                   placeholder="Start Date"/>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <label>Finish Date</label>
+                            <input type="text" required name="experiences[finish_date]" data-date-start-date="0"
+                                   data-date-autoclose="true"
+                                   class="form-control" data-provide="datepicker" placeholder="Finish Date"/>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <label>Description</label>
+                            <input type="text" name="experiences[description]"
+                                   class="form-control" placeholder="Description"/>
+                        </div>
+                        <div class="col-md-6 col-sm-12 mt-32">
+                            <button data-repeater-delete type="button" class="btn btn-primary">Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <input data-repeater-create type="button" class="add-button btn btn-primary"
+                           value="+ Add Experience"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12">
+            <h5>Certifications</h5>
+            <div class="repeater row" id="certifications">
+                <div data-repeater-list="certifications">
+                    <div data-repeater-item class="inline-form row mx-0 mb-15">
+                        <div class="col-md-6 col-sm-12">
+                            <label>Title</label>
+                            <input type="text" required name="certifications[title]"
+                                   class="form-control" placeholder="Title"/>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <label>Certified from</label>
+                            <input type="text" required name="certifications[certified_from]"
+                                   class="form-control" placeholder="Certified from"/>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <label>Year</label>
+                            <input type="text" required name="certifications[year]"
+                                   class="form-control" placeholder="Year"/>
+                        </div>
+                        <div class="col-md-6 col-sm-12 mt-32">
+                            <button data-repeater-delete type="button" class="btn btn-primary">Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <input data-repeater-create type="button" class="add-button btn btn-primary"
+                           value="+ Add Certification"/>
+                </div>
+                <div class="col-sm-12 mt20">
+                    <label for="languages">Languages</label>
+                    <select id="languages" name="languages[]" class="form-control select2-multiple" multiple=""
+                            tabindex="-1"
+                            aria-hidden="true">
+                        {% for language in languages %}
+                        <option value="{{language.id}}">{{language.name}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-sm-12 mt20">
+                    <label for="skills">Skills</label>
+                    <select id="skills" name="skills[]" class="form-control select2-multiple" multiple="" tabindex="-1"
+                            aria-hidden="true">
+                        {% for skill in skills %}
+                        <option value="{{skill.id}}">{{skill.name}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="col-sm-12 mt20">
+                    <button type="submit" class="btn btn-primary">Apply</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% put javascript %}
+<script src="{{'assets/js/jquery.repeater.min.js'|theme}}"></script>
+<script>
+    $(document).ready(function () {
+        $("#languages").select2({
+            theme: "bootstrap"
+        });
+
+        $("#skills").select2({
+            theme: "bootstrap",
+            tags: true
+        });
+
+        $('#educations').repeater({
+            initEmpty: true,
+            defaultValues: {
+                /*'siblings[name]': 'test'*/
+            },
+            show: function () {
+                $(this).slideDown();
+            },
+            hide: function (deleteElement) {
+                var element = $(this);
+                swal({
+                    title: 'Are you sure?',
+                    text: "You won't be able to revert this!",
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: 'black',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!'
+                }, function (isConfirm) {
+                    if (isConfirm) {
+                        element.slideUp(deleteElement);
+                    }
+                });
+            },
+            isFirstItemUndeletable: true
+        });
+
+        $('#experiences').repeater({
+            initEmpty: true,
+            defaultValues: {
+                /*'siblings[name]': 'test'*/
+            },
+            show: function () {
+                $(this).slideDown();
+            },
+            hide: function (deleteElement) {
+                var element = $(this);
+                swal({
+                    title: 'Are you sure?',
+                    text: "You won't be able to revert this!",
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: 'black',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!'
+                }, function (isConfirm) {
+                    if (isConfirm) {
+                        element.slideUp(deleteElement);
+                    }
+                });
+            },
+            isFirstItemUndeletable: true
+        });
+
+        $('#certifications').repeater({
+            initEmpty: true,
+            defaultValues: {
+                /*'siblings[name]': 'test'*/
+            },
+            show: function () {
+                $(this).slideDown();
+            },
+            hide: function (deleteElement) {
+                var element = $(this);
+                swal({
+                    title: 'Are you sure?',
+                    text: "You won't be able to revert this!",
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: 'black',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!'
+                }, function (isConfirm) {
+                    if (isConfirm) {
+                        element.slideUp(deleteElement);
+                    }
+                });
+            },
+            isFirstItemUndeletable: true
+        });
+    });
+</script>
+{% endput %}

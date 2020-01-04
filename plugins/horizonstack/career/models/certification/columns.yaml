@@ -1,0 +1,13 @@
+columns:
+    title:
+        label: Title
+        type: text
+        searchable: true
+        sortable: true
+    year:
+        label: 'Certified year'
+        type: date
+    updated_at:
+        label: 'Date Modified'
+        type: datetime
+        sortable: true

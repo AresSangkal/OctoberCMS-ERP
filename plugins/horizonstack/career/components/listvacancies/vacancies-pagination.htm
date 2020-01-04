@@ -1,0 +1,20 @@
+{% if vacancies.lastPage > 1 %}
+<div class="py-2 text-center">
+    <div class="btn-group my-2">
+        <a class="btn btn-light {{ vacancies.currentPage == 1 ? 'disabled' : 'paginate-list' }}"
+           data-page="{{vacancies.currentPage - 1}}" href="javascript:void(0)">&#171;</a>
+
+        {% for page in 1..vacancies.lastPage %}
+        <a class="btn {{ vacancies.currentPage == page ? 'btn-primary' : 'btn-light paginate-list' }}"
+           data-page="{{page }}"
+           href="javascript:void(0)"> {{ page }}
+        </a>
+        {% endfor %}
+
+        <a class="btn btn-light {{ vacancies.lastPage == vacancies.currentPage ? 'disabled' : 'paginate-list'}}"
+           data-page="{{vacancies.currentPage + 1 }}"
+           href="javascript:void(0)">&#187;
+        </a>
+    </div>
+</div>
+{% endif %}

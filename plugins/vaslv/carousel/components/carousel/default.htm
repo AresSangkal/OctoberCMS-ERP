@@ -1,0 +1,52 @@
+{% if __SELF__.carousel and __SELF__.carousel.slides %}
+    <div id="vaslvCarousel{{ __SELF__.carousel.id }}" class="carousel slide"
+         data-interval="{{ __SELF__.carousel.interval }}" {# The amount of time to delay between automatically cycling an item. #}
+         data-keyboard="{{ __SELF__.carousel.has_keyboard_react ? 'true' : 'false' }}" {# true or false - Whether the carousel should react to keyboard events. #}
+         data-pause="{{ __SELF__.carousel.has_hover_pause ? 'hover' : 'false' }}" {# hover or false - Pauses the cycling of the carousel on hover #}
+         data-ride="{{ __SELF__.carousel.has_autoplays ? 'carousel' : 'false' }}" {# carousel or false - autoplays the carousel on load #}
+         data-wrap="{{ __SELF__.carousel.has_continuously_cycle ? 'true' : 'false' }}" {# true or false - Whether the carousel should cycle continuously #}>
+
+        {% if __SELF__.carousel.with_indicators %}
+            <ol class="carousel-indicators">
+                {% for i, slide in __SELF__.carousel.slides %}
+                    <li data-target="#vaslvCarousel{{ __SELF__.carousel.id }}"
+                        data-slide-to="{{ i }}" {% if i == 0 %} class="active" {% endif %}></li>
+                {% endfor %}
+            </ol>
+        {% endif %}
+
+        <div class="carousel-inner">
+            {% for i, slide in __SELF__.carousel.slides %}
+                <div class="carousel-item {% if i == 0 %} active {% endif %}">
+                    {% if (slide.url) %}<a href="{{ slide.url }}" target="_blank">{% endif %}
+                        <img class="d-block w-100" src="{{ slide.imagePath }}" alt="{{ slide.caption }}">
+
+                        {% if slide.caption or slide.description %}
+                            <div class="carousel-caption d-none d-md-block">
+                                {% if slide.caption %}
+                                    <h5>{{ slide.caption }}</h5>
+                                {% endif %}
+
+                                {% if (slide.description) %}
+                                    {{ slide.description|raw }}
+                                {% endif %}
+                            </div>
+                        {% endif %}
+                    {% if (slide.url) %}</a>{% endif %}
+                </div>
+            {% endfor %}
+        </div>
+
+        {% if __SELF__.carousel.with_controls %}
+            <a class="carousel-control-prev" href="#vaslvCarousel{{ __SELF__.carousel.id }}" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+
+            <a class="carousel-control-next" href="#vaslvCarousel{{ __SELF__.carousel.id }}" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        {% endif %}
+    </div>
+{% endif %}

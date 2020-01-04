@@ -1,0 +1,17 @@
+<a href="javascript:void(0)"
+   class="btn btn-sm bg-success text-success <?php if ($record->admin_approval == 2): ?>disabled<?php endif; ?>"
+   data-request="onApproveApplication"
+   data-request-confirm="Are you sure you want to approve this Application?"
+   data-request-data="applicationId: <?= $record->id ?>"
+   data-stripe-load-indicator data-request-flash>
+    Approve
+</a>
+<a href="javascript:void(0)"
+   class="btn btn-sm bg-danger text-danger <?php if ($record->admin_approval == 3): ?>disabled<?php endif; ?>"
+   data-request="onRejectedApplication"
+   data-request-confirm="Are you sure you want to send this Application?"
+   data-request-data="applicationId: <?= $record->id ?>"
+   data-stripe-load-indicator data-request-flash>
+    Reject
+</a>
+

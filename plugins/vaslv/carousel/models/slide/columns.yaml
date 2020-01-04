@@ -1,0 +1,31 @@
+columns:
+    thumb:
+        label: 'vaslv.carousel::lang.models.slide.fields.image.label'
+        type: vaslv_carousel_thumb
+        width: 262px
+        searchable: false
+        sortable: false
+    carousel:
+        label: 'vaslv.carousel::lang.models.slide.fields.carousel.label'
+        type: text
+        searchable: true
+        sortable: true
+        select: name
+        relation: carousel
+    caption:
+        label: 'vaslv.carousel::lang.models.slide.fields.caption.label'
+        type: text
+        searchable: true
+        sortable: true
+    weight:
+        label: 'vaslv.carousel::lang.models.slide.fields.weight.label'
+        type: number
+        sortable: true
+    created_at:
+        label: 'vaslv.carousel::lang.models.slide.fields.created_at.label'
+        type: datetime
+        sortable: true
+    updated_at:
+        label: 'vaslv.carousel::lang.models.slide.fields.updated_at.label'
+        type: datetime
+        sortable: true

@@ -1,0 +1,6 @@
+plugin:
+    name: 'horizonstack.blogextend::lang.plugin.name'
+    description: 'horizonstack.blogextend::lang.plugin.description'
+    author: Horizonstack
+    icon: oc-icon-plus
+    homepage: ''

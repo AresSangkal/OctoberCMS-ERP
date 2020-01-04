@@ -1,0 +1,24 @@
+fields:
+    title:
+        label: Title
+        span: auto
+        type: text
+    start_date:
+        label: 'Start date'
+        span: left
+        type: datepicker
+        mode: date
+    finish_date:
+        label: 'Finish date'
+        span: right
+        type: datepicker
+        mode: date
+    location:
+        label: 'Location'
+        span: auto
+        type: text
+    description:
+        label: Description
+        span: auto
+        type: textarea
+        size: big

@@ -1,0 +1,111 @@
+description = "Default layout"
+
+[localePicker]
+forceUrl = 0
+==
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Gulf Consolidated Contractors Co. - {{ this.page.title }}</title>
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <meta name="author" content="OctoberCMS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="OctoberCMS">
+    <link rel="icon" type="image/png" href="{{ 'assets/img/favicon.ico'|theme }}">
+    <link href="{{ [
+        'assets/css/font-awesome.min.css',
+        'assets/css/themify-icons.css',
+        'assets/css/bootstrap.min.css',
+        'assets/css/animate.min.css',
+        'assets/css/owl.carousel.min.css',
+        'assets/css/owl.theme.min.css',
+        'assets/css/magnific-popup.css',
+        'assets/css/style.css',
+        'assets/css/main.css',
+        'assets/css/custom.css',
+        'assets/sweetalert/sweetalert.css',
+        'assets/bootstrap-datepicker/css/bootstrap-datepicker.css',
+        'assets/select2/select2-bootstrap.min.css',
+        'assets/select2/select2.css'
+        ]|theme }}" rel="stylesheet">
+
+    {% if activeLocale == 'ar' %}
+    <link rel="stylesheet" href="{{'assets/css/style-ar.css'|theme}}">
+    {% endif %}
+
+    <link rel="stylesheet" href="{{'assets/css/responsive.css'|theme}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+          media="screen">
+    {% styles %}
+</head>
+<body>
+{% flash %}
+<script>
+    // only execute once the DOM is loaded
+    document.addEventListener("DOMContentLoaded", function () {
+        $.oc.flashMsg({text: '{{ message }}', 'class': '{{ type }}', 'interval': 10})
+    }, false);
+</script>
+{% endflash %}
+
+<div class="body-overlay"></div>
+<div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+<!-- Header -->
+<header id="layout-header">
+    {% partial 'site/header' %}
+</header>
+
+{% page %}
+
+
+<!-- Footer -->
+<footer class="footer single-prallex">
+    {% partial 'site/footer' %}
+</footer>
+
+<div id="back-to-top">
+    <a class="top" id="top" href="#top"> <i class="ti-angle-up"></i> </a>
+</div>
+
+<!-- Scripts -->
+<script src="{{ [
+'assets/js/jquery-2.2.4.min.js',
+'assets/js/bootstrap.min.js',
+'assets/js/popper.min.js',
+'assets/js/owl.carousel.min.js',
+'assets/js/wow.min.js',
+'assets/js/scrollIt.min.js',
+'assets/js/waypoints.min.js',
+'assets/js/jquery.counterup.min.js',
+'assets/js/morphext.min.js',
+'assets/js/parallaxie.js',
+'assets/js/particles.min.js',
+'assets/js/jquery.zoom.js',
+'assets/js/setting.js',
+'assets/js/custom.js',
+'assets/js/switcher.js',
+'assets/sweetalert/sweetalert.min.js',
+'assets/bootstrap-datepicker/js/bootstrap-datepicker.js',
+'assets/select2/select2.min.js'
+]|theme }}"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+{% framework extras %}
+{% placeholder javascript %}
+{% scripts %}
+<script>
+    $(window).on('ajaxErrorMessage', function (event, message) {
+        $.oc.flashMsg({text: message, 'class': 'error', 'interval': 10});
+        return false;
+        event.preventDefault();
+    });
+</script>
+
+</body>
+</html>

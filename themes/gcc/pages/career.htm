@@ -1,0 +1,31 @@
+title = "Career"
+url = "/career"
+layout = "default"
+is_hidden = 0
+
+[listVacancies]
+vacanciesPerPage = 15
+sortOrder = "created_at desc"
+==
+<!-- Start Slider Home -->
+<section id="contact" class="contact">
+    <div class="part-top mb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading prallex-heading">
+                        <h2>{{'Career '|_ }}<span>{{'In'|_ }}</span> {{'Focus'|_ }}</h2>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="vacancies">
+        <div class="part">
+            {% component 'listVacancies' %}
+        </div>
+    </div>
+</section>
+<!--// End Slider Home-->

@@ -1,0 +1,47 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table horizonstack_career_categories'
+    - builder_table_create_horizonstack_career_categories.php
+1.0.3:
+    - 'Created table horizonstack_career_vacancies'
+    - builder_table_create_horizonstack_career_vacancies.php
+1.0.4:
+    - 'Created table horizonstack_career_applications'
+    - builder_table_create_horizonstack_career_applications.php
+1.0.5:
+    - 'Created table horizonstack_career_languages'
+    - builder_table_create_horizonstack_career_languages.php
+1.0.6:
+    - 'Created table horizonstack_career_application_language'
+    - builder_table_create_horizonstack_career_application_language.php
+1.0.7:
+    - 'Created table horizonstack_career_application_educations'
+    - builder_table_create_horizonstack_career_application_educations.php
+1.0.8:
+    - 'Created table horizonstack_career_application_experiences'
+    - builder_table_create_horizonstack_career_application_experiences.php
+1.0.9:
+    - 'Created table horizonstack_career_skills'
+    - builder_table_create_horizonstack_career_skills.php
+1.0.10:
+    - 'Created table horizonstack_career_application_skill'
+    - builder_table_create_horizonstack_career_application_skill.php
+1.0.11:
+    - 'Created table horizonstack_career_application_certifications'
+    - builder_table_create_horizonstack_career_application_certifications.php
+1.0.12:
+    - 'Add job_app_no field to vacancies table'
+    - migration1012.php
+1.0.13:
+    - 'Add nat_id field to applications table'
+    - migration1013.php
+1.0.14:
+    - 'Add vacancy_id to applications table'
+    - migration1014.php
+1.0.15:
+    - 'Add is_linkedin_required field to horizonstack_career_vacancies table'
+    - migration1015.php
+1.0.16:
+    - 'Updated table horizonstack_career_applications'
+    - builder_table_update_horizonstack_career_applications.php

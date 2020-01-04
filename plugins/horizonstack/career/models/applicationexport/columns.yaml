@@ -1,0 +1,70 @@
+columns:
+    first_name:
+        label: 'First Name'
+        type: text
+    last_name:
+        label: 'Last Name'
+        type: text
+    nat_id:
+        label: 'NAT ID'
+        type: text
+    email:
+        label: 'Email'
+        type: text
+    mobile:
+        label: 'Mobile'
+        type: text
+    vacancy_title:
+        label: 'Vacancy'
+        type: text
+    location:
+        label: 'Location'
+        type: text
+    linkedin_link:
+        label: 'linkedIn Profile link'
+        type: text
+    skill_set:
+        label: 'Skills'
+        type: text
+    languages_set:
+        label: 'Languages'
+        type: text
+    education_title:
+        label: 'Title - Education'
+        type: text
+    education_start_date:
+        label: 'Start Date - Education'
+        type: text
+    education_finish_date:
+        label: 'Finish Date - Education'
+        type: text
+    education_location:
+        label: 'Location - Education'
+        type: text
+    education_description:
+        label: 'Description - Education'
+        type: text
+    experience_title:
+        label: 'Title - Experience'
+        type: text
+    experience_start_date:
+        label: 'Start Date - Experience'
+        type: text
+    experience_finish_date:
+        label: 'Finish Date - Experience'
+        type: text
+    experience_location:
+        label: 'Location - Experience'
+        type: text
+    experience_description:
+        label: 'Description - Experience'
+        type: text
+    certification_title:
+        label: 'Title - Certification'
+        type: text
+    certification_certified_from:
+        label: 'Certified from - Certification'
+        type: text
+    certification_year:
+        label: 'Year - Certification'
+        type: text

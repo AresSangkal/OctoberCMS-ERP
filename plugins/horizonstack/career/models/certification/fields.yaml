@@ -1,0 +1,13 @@
+fields:
+    title:
+        label: Title
+        span: full
+        type: text
+    certified_from:
+        label: 'Certified from'
+        span: left
+        type: text
+    year:
+        label: 'Year'
+        span: right
+        type: dropdown

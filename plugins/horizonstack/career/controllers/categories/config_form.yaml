@@ -1,0 +1,10 @@
+name: Categories
+form: $/horizonstack/career/models/category/fields.yaml
+modelClass: Horizonstack\Career\Models\Category
+defaultRedirect: horizonstack/career/categories
+create:
+    redirect: 'horizonstack/career/categories/update/:id'
+    redirectClose: horizonstack/career/categories
+update:
+    redirect: horizonstack/career/categories
+    redirectClose: horizonstack/career/categories

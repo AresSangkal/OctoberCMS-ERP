@@ -1,0 +1,4 @@
+title: Languages
+modelClass: Horizonstack\Career\Models\Language
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,24 @@
+educations:
+  label: Education
+  manage:
+    form: $/horizonstack/career/models/education/fields.yaml
+    list: $/horizonstack/career/models/education/columns.yaml
+  view:
+    list: $/horizonstack/career/models/education/columns.yaml
+    toolbarButtons: create|delete
+experiences:
+  label: Experience
+  manage:
+    form: $/horizonstack/career/models/experience/fields.yaml
+    list: $/horizonstack/career/models/experience/columns.yaml
+  view:
+    list: $/horizonstack/career/models/experience/columns.yaml
+    toolbarButtons: create|delete
+certifications:
+  label: Certification
+  manage:
+    form: $/horizonstack/career/models/certification/fields.yaml
+    list: $/horizonstack/career/models/certification/columns.yaml
+  view:
+    list: $/horizonstack/career/models/certification/columns.yaml
+    toolbarButtons: create|delete

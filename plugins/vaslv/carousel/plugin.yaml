@@ -1,0 +1,34 @@
+plugin:
+    name: 'vaslv.carousel::lang.plugin.name'
+    description: 'vaslv.carousel::lang.plugin.description'
+    author: 'Andrey Vasilev'
+    icon: oc-icon-picture-o
+    homepage: 'https://bitbucket.org/vaslv/octobercms-plugin-carousel/'
+navigation:
+    carousel:
+        label: 'vaslv.carousel::lang.menu.carousel.label'
+        url: vaslv/carousel/slides
+        icon: icon-picture-o
+        permissions:
+            - vaslv.carousel.access_carousels
+            - vaslv.carousel.access_slides
+        sideMenu:
+            slides:
+                label: 'vaslv.carousel::lang.menu.carousel.side_menu.slides.label'
+                url: vaslv/carousel/slides
+                icon: icon-picture-o
+                permissions:
+                    - vaslv.carousel.access_slides
+            carousel:
+                label: 'vaslv.carousel::lang.menu.carousel.side_menu.carousels.label'
+                url: vaslv/carousel/carousels
+                icon: icon-ellipsis-h
+                permissions:
+                    - vaslv.carousel.access_carousels
+permissions:
+    vaslv.carousel.access_carousels:
+        tab: 'vaslv.carousel::lang.permissions.tab'
+        label: 'vaslv.carousel::lang.permissions.access_carousels'
+    vaslv.carousel.access_slides:
+        tab: 'vaslv.carousel::lang.permissions.tab'
+        label: 'vaslv.carousel::lang.permissions.access_slides'

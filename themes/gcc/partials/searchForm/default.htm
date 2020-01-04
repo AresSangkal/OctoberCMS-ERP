@@ -1,0 +1,20 @@
+<form method="GET" action="{{ __SELF__.resultPage|page }}">
+    <div class="input-group stylish-input-group">
+        <input type="text" class="form-control" name="search" value="{{ searchTerm }}"
+               placeholder="Ketik yang Anda cari">
+
+        {% if __SELF__.categoryFilter %}
+        <select name="cat[]" class="form-control">
+            {% for key,cat in __SELF__.categories %}
+            <option value="{{ key }}">{{ cat }}</option>
+            {% endfor %}
+        </select>
+        {% endif %}
+
+        <span class="input-group-addon">
+                                    <button type="submit">
+                                        <span class="fa fa-search" aria-hidden="true"></span>
+                                    </button>
+                                </span>
+    </div>
+</form>

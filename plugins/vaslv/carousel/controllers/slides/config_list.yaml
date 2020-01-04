@@ -1,0 +1,12 @@
+list: $/vaslv/carousel/models/slide/columns.yaml
+modelClass: Vaslv\Carousel\Models\Slide
+title: Slides
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'vaslv/carousel/slides/update/:id'

@@ -1,0 +1,21 @@
+1.0.1:
+    - 'First version of Slideshow'
+    - create_slideshows_table.php
+    - create_slides_table.php
+    - seeder.php
+1.0.2:
+    - 'Added is_published state and publication dates'
+    - table_update_flosch_slideshow_slides.php
+1.0.3:
+    - 'Update documentation for Twitter Bootstrap sources'
+1.0.4:
+    - 'Update slides published query-scope (correct dates comparison)'
+1.0.5:
+    - 'Fix permission settings'
+1.0.6:
+    - 'Add persian translation (thanks to @cracki)'
+    - 'Add french translation'
+1.0.7:
+    - 'Add german translation (thanks to @danielbruni)'
+1.0.8:
+    - 'Correct columns definition (thanks to @Jeime)'

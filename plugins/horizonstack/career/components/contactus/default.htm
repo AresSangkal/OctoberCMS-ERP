@@ -1,0 +1,59 @@
+<div class="contact-form">
+    <h4>Send us your queries</h4>
+    <p class="mt30">We are ready to help you with any problem anytime,Just fill our form below and
+        wait for answer from our friendly team! </p>
+    <div id="show_contact_msg"></div>
+    <form id='contact-form' class="mt25" data-request="onContactUs"
+          data-request-success="contactSubmittedSuccessfully()" data-request-flash>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <input id="contact_name" type="text" name="name" placeholder="Full Name"
+                       class="form-control" required="required">
+            </div>
+            <div class="form-group col-md-6">
+                <input id="contact_company" type="text" name="company" placeholder="Company"
+                       class="form-control" required="required">
+            </div>
+            <div class="form-group col-md-6">
+                <input id="contact_website" type="text" name="website" placeholder="Website"
+                       class="form-control" required="required">
+            </div>
+            <div class="form-group col-sm-6">
+                <input id="contact_email" type="email" name="email" class="form-control"
+                       placeholder="Email" required="required">
+            </div>
+            <div class="form-group col-md-6">
+                <input id="contact_phone" type="text" name="telephone" placeholder="Phone"
+                       class="form-control" required="required">
+            </div>
+            <div class="form-group col-md-6">
+                <input id="contact_mobile" type="text" name="mobile" placeholder="Mobile"
+                       class="form-control" required="required">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                                    <textarea id="contact_address" name="address" class="form-control"
+                                              placeholder="Address" required="required"></textarea>
+            </div>
+            <div class="form-group col-md-6">
+                                    <textarea id="contact_text" name="comment" class="form-control"
+                                              placeholder="Write Your Message..." required="required"></textarea>
+            </div>
+            <div class="col-md-12">
+                <div>
+                    <button type="submit" name="send" value="Send Now" class="button">Send Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% put javascript %}
+<script>
+    function contactSubmittedSuccessfully() {
+        $('#contact-form').trigger("reset");
+    }
+</script>
+{% endput %}

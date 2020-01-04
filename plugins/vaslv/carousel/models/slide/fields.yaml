@@ -1,0 +1,40 @@
+fields:
+    carousel:
+        label: 'vaslv.carousel::lang.models.slide.fields.carousel.label'
+        nameFrom: name
+        descriptionFrom: description
+        span: left
+        required: 1
+        type: relation
+    weight:
+        label: 'vaslv.carousel::lang.models.slide.fields.weight.label'
+        span: right
+        default: '0'
+        required: 1
+        type: number
+        comment: 'vaslv.carousel::lang.models.slide.fields.weight.comment'
+    image:
+        label: 'vaslv.carousel::lang.models.slide.fields.image.label'
+        mode: image
+        imageWidth: 320
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        required: 1
+        type: fileupload
+    caption:
+        label: 'vaslv.carousel::lang.models.slide.fields.caption.label'
+        span: full
+        type: text
+    description:
+        label: 'vaslv.carousel::lang.models.slide.fields.description.label'
+        size: ''
+        span: full
+        type: richeditor
+    url:
+        label: 'vaslv.carousel::lang.models.slide.fields.url.label'
+        span: full
+        type: text
+        comment: 'vaslv.carousel::lang.models.slide.fields.url.comment'

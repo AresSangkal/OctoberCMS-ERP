@@ -1,0 +1,10 @@
+name: Languages
+form: $/horizonstack/career/models/language/fields.yaml
+modelClass: Horizonstack\Career\Models\Language
+defaultRedirect: horizonstack/career/languages
+create:
+    redirect: 'horizonstack/career/languages/update/:id'
+    redirectClose: horizonstack/career/languages
+update:
+    redirect: horizonstack/career/languages
+    redirectClose: horizonstack/career/languages

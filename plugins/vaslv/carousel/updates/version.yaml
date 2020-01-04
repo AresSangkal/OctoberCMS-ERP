@@ -1,0 +1,10 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table vaslv_carousel_carousels.'
+    - create_table_vaslv_carousel_carousels.php
+1.0.3:
+    - 'Created table vaslv_carousel_slides.'
+    - create_table_vaslv_carousel_slides.php
+1.0.4:
+    - 'Bug fix.'
